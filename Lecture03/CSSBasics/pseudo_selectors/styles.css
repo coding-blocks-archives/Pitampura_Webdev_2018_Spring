@@ -1,0 +1,19 @@
+
+div {
+  height: 50px;
+  font-size: 16pt;
+}
+
+div:hover {
+  background-color: beige;
+  font-size: 25pt;
+}
+
+div:active {
+  background-color: greenyellow;
+  font-size: 30pt;
+}
+
+input:focus {
+  font-size: 25pt;
+}

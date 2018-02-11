@@ -1,0 +1,20 @@
+.right {
+  text-align: right
+}
+
+.big {
+  font-family: cursive;
+  font-size: 18pt
+}
+
+#one {
+  color: blue
+}
+
+#three {
+  font-family: sans-serif
+}
+
+p {
+  font-family: monospace
+}
