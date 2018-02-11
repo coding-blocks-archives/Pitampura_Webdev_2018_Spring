@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button>A <b>bold</b><br>BUTTON</button>
+  <br>
+  <form>
+    <input>
+    <input type="number">
+    <input type="number" value="20" min="10" max="21">
+    <br>
+    <input type="email" placeholder="Enter Email Address">
+    <input type="color" value="#444444">
+    <input type="date">
+    <input type="datetime">
+    <br>
+    <input type="file">
+    <br>
+    <input type="button" value="A BUTTON">
+    <br>
+    <input type="submit" value="SUBMIT">
+    <input type="reset">
+    <br>
+    <input id="apple" type="checkbox">
+    <label for="apple">Apple</label>
+    <input id="google" type="checkbox">
+    <label for="google">Google</label>
+    <input id="facebook" type="checkbox">
+    <label for="facebook">Facebook</label>
+    <br>
+    <input type="radio" name="a">
+    <input type="radio" name="a">
+    <input type="radio" name="b">
+  </form>
+  
+  <h2>Search</h2>
+  <form action="https://google.com/search">
+    <input name="q">
+    <input name="q">
+    <select name="month">
+      <option selected disabled value="null"></option>
+      <option value="1">Jan</option>
+      <option >Feb</option> <!-- Takes innerText if no value -->
+      <option value="3">March</option>
+    </select>
+    <input type="submit" value="Search">
+    <input  formaction="https://bing.com/search" 
+            type="submit" 
+            value="Search Bing">
+  </form>
+
+  <p contenteditable="true"> This is some text </p>
+
+  <p draggable="true">Somre more text</p>
+
+  
+</body>
+</html>
