@@ -1,0 +1,38 @@
+div {
+  border: solid blue 2px;
+  background-color: red;
+  margin: 10px;
+  padding: 20px;
+  width: 0px;
+}
+#d1 {
+  transform: scale(0.5, 0.5)
+}
+#d2 {
+  transform: scaleY(1.5)
+}
+#d3 {
+  transform: scaleX(0.5)
+}
+
+#d4 {
+  transform: translateY(-20px)
+}
+
+#d6 {
+  transform: skewX(45deg)
+}
+
+#d7 {
+  transform: skewY(45deg)
+}
+
+#d8 {
+  transform: rotate(10deg)
+}
+
+#d9 {
+  transform: matrix(0.5, 0.1, 0, 0.5, 10, 10)
+}
+
+
