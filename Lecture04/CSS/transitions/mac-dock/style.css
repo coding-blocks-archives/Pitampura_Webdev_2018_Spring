@@ -1,0 +1,10 @@
+item {
+  display: inline-block;
+  border: solid black 1px;
+  padding: 10px;
+  transition: 0.2s ease-out
+}
+
+item:hover {
+  padding: 20px
+}

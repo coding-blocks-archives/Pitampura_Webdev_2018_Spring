@@ -1,0 +1,29 @@
+div {
+  background-color: green;
+  border: solid black 2px;
+  padding: 20px;
+  width: 0;
+}
+
+@keyframes anim1 {
+  0% {
+    transform: scaleX(2)
+  }
+
+  33% {
+    transform: translateY(40px)
+  }
+
+  50% {
+    background-color: red;
+    transform: translateX(30px)
+  }
+
+  100% {
+    transform: scaleX(0.5)
+  }
+}
+
+#d1 {
+  animation: 2s infinite anim1 ease-out
+}
