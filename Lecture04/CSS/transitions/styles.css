@@ -1,0 +1,32 @@
+div {
+  background-color: blue;
+  border: solid red 2px;
+  width: 0px;
+  transition: 1s ease-out;
+  padding: 20px;
+  margin: 20px;
+  height: 0px;
+}
+
+#d1:hover {
+  transition: 1s ease-in;
+  width: 80px;
+}
+
+#d2:hover {
+  transition: 1s ease-out;
+  width: 80px;
+}
+
+#d3:hover {
+  height: 20px;
+  /* transform: scaleY(2) */
+}
+#d4 {
+  transition: 0.5s steps(5);
+}
+#d4:hover {
+  transition: box-shadow 0.5s steps(5);
+  transform: scale(1.5);
+  box-shadow: 5px -5px 5px black;
+}
