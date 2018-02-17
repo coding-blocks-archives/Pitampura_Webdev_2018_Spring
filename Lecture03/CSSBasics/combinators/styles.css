@@ -1,0 +1,24 @@
+
+div {
+  color: blue
+}
+
+div div {
+  color: red
+}
+
+div span {
+  color: green
+}
+
+span span {
+  color: purple
+}
+
+li > ol {
+  color: blue
+}
+
+li + li {
+  color: red
+}

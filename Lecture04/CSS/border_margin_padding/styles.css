@@ -1,0 +1,27 @@
+
+div {
+  padding: 10px;
+  height: 400px;
+  border: black solid 1px
+}
+
+#one {
+  background-color: aqua
+}
+
+#two {
+  background-color: bisque;
+  position: sticky;
+  top: 40px;
+  left: 50px;
+}
+
+#three {
+  background-color: lavender;
+  position: fixed;
+  top: 0px; left: 0px;
+}
+
+#four {
+  background-color: lightgreen
+}

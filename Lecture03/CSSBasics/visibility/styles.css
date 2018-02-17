@@ -1,0 +1,13 @@
+
+div {
+  font-size: 18pt;
+  border: solid black 2px
+}
+
+#d3:active {
+  visibility: hidden;
+}
+
+#d2:hover {
+  height: 0;
+}
