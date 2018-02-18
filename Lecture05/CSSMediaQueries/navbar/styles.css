@@ -1,0 +1,38 @@
+ul {
+  list-style-type: none;
+  padding-left: 40px;
+}
+nav li {
+  border: 2px solid black;
+  margin-left: -5px;
+  vertical-align: top;
+  display: inline-block;
+  height: 30px;
+  width: 60px;
+  background-color: burlywood;
+  padding: 10px;
+}
+li li {
+  display: none;
+}
+
+li:hover > * > li {
+  display: inline-block;
+}
+
+
+li:hover > * > li:first-child {
+  margin-top: 105%;
+}
+
+
+@media (max-width: 799px) {
+  nav li {
+    display: block;
+  }
+
+  li li {
+    margin-left: 133%;
+    display: none;
+  }
+}

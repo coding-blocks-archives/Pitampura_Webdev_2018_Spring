@@ -1,0 +1,12 @@
+#d1 {
+  height: 400px;
+  width: 400px;
+  background-color: deeppink;
+}
+
+@media (max-width: 800px) {
+
+  #d1 {
+    background-color: darkorange;
+  }
+}
