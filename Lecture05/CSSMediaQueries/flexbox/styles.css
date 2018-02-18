@@ -1,0 +1,26 @@
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center;
+  align-items: center;
+  align-content: flex-end;
+  flex-direction: row; */
+  height: 600px;
+  width: 600px;
+  background-color: coral;
+}
+
+.item {
+  color: white;
+  font-size: 18pt;
+  background-color: darkcyan;
+  height: 50px;
+  width: 50px;
+  margin: 20px;
+}
+
+@media (max-width: 800px) {
+  .box {
+    width: 200px;
+  }
+}
