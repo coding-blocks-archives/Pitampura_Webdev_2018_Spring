@@ -1,0 +1,13 @@
+body {
+    background-color: #f4f6f9;
+}
+
+.content {
+    background-color: white;
+    min-height: 90vh;
+    box-shadow: 10px 10px 5px #ccc;
+}
+
+.title {
+    border-bottom: solid 1px #bbb;
+}
