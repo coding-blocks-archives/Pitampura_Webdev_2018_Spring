@@ -1,17 +1,25 @@
 function funGen() {
   let x = 0;
   function newFun () {
-    x++
-    return x;
+    let y = x+1
+    function newerFun () {
+      y++
+      return y
+    }
+    return newerFun
   }
 
   return newFun
 }
 
-let fun = funGen()
+let fun1 = funGen()
 let fun2 = funGen()
-console.log(fun())
-console.log(fun())
-console.log(fun())
-console.log(fun2())
-console.log(fun())
+let fun11 = fun1()
+let fun12 = fun1()
+let fun21 = fun2()
+console.log(fun11())
+console.log(fun12())
+console.log(fun21())
+console.log(fun21())
+
+
