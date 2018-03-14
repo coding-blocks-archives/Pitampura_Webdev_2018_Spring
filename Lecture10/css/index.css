@@ -1,0 +1,17 @@
+.move-icon {
+    color: #0275d8;
+}
+
+.delete {
+    color: #d9534f;
+}
+
+#todoList > li:first-child .fa-chevron-up {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+#todoList > li:last-child .fa-chevron-down {
+    visibility: hidden;
+    pointer-events: none;
+}
