@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>{{title}}</title>
+    <script src="jquery-3.3.1.js"></script>
+    <script src="todos.js"></script>
 </head>
 <body>
 <form action="/add" method="get">
-    <input name="task" type="text">
-    <input type="submit" value="ADD">
+    <input id="task" name="task" type="text">
+    <input id="btn" type="submit" value="ADD">
 </form>
-<ul>
+<ul id="list">
 {{#each todos as |t|}}
     <li>{{t.task}}</li>
 {{/each}}
