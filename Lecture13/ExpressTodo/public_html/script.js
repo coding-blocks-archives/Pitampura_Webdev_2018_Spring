@@ -3,7 +3,7 @@ $(function () {
   let addtodo = $('#addtodo')
   let todolist = $('#todolist')
 
-  function refreshTodos() {
+  function refreshTodos() {q
     todolist.empty()
     $.get('/todos', function (data) {
       for (todo of data) {

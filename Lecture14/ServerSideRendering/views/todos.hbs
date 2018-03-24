@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+<form action="/add" method="get">
+    <input name="task" type="text">
+    <input type="submit" value="ADD">
+</form>
+<ul>
+{{#each todos as |t|}}
+    <li>{{t.task}}</li>
+{{/each}}
+</ul>
+</body>
+</html>
