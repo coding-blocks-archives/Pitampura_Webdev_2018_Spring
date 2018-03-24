@@ -14,9 +14,13 @@ $(function () {
   btn.click(function (event) {
     event.preventDefault()
     console.log(event)
-    $.get('/api/todos/add?task=' + task.val(), (data) =>{
-      refresh(data)
-    })
+    $.post(
+      '/api/todos',
+      {
+        task: task.val()
+      },
+      (data) => refresh(data)
+      )
   })
 
 })

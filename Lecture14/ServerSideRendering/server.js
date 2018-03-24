@@ -7,6 +7,9 @@ let todos = []
 
 app.set('view engine', 'hbs')
 
+app.use(express.json())
+app.use(express.urlencoded({extended: true}))
+
 app.use('/', express.static(path.join(__dirname, 'public')))
 
 app.get('/', (req, res) => {
@@ -16,9 +19,9 @@ app.get('/', (req, res) => {
   })
 })
 
-app.get('/add', (req, res) => {
+app.post('/', (req, res) => {
   let todo = {
-    task: req.query.task
+    task: req.body.task
   }
   todos.push(todo)
   res.redirect('/')
@@ -28,9 +31,9 @@ app.get('/api/todos', (req, res) => {
   res.send(todos)
 })
 
-app.get('/api/todos/add', (req, res) => {
+app.post('/api/todos', (req, res) => {
   let todo = {
-    task: req.query.task
+    task: req.body.task
   }
   todos.push(todo)
   res.redirect('/api/todos')
