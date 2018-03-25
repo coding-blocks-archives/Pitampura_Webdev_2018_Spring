@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Courses</title>
+</head>
+<body>
+<form>
+    <input type="text" placeholder="name">
+    <br>
+    <input type="number" placeholder="lectures">
+    <br>
+    <input type="language" placeholder="languages">
+    <br>
+    <select>
+        {{#each teachers as |teacher|}}
+            <option>{{teacher.name}}</option>
+        {{/each}}
+    </select>
+</form>
+</body>
+</html>
