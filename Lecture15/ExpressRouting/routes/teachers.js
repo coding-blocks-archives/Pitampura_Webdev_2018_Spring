@@ -11,7 +11,7 @@ route.post('/', (req, res) => {
   teachers.push({
     name: req.body.name
   })
-  res.send({message: "Success", id: teachers.length})
+  res.send({message: "success", id: teachers.length})
 })
 
 module.exports = route
