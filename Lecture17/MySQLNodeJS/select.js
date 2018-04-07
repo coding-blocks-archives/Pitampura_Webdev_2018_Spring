@@ -1,5 +1,7 @@
 const mysql = require('mysql2')
 
+let arg = process.argv[2]
+
 const conn = mysql.createConnection({
   host: 'localhost',
   // port: 3306,
@@ -10,7 +12,8 @@ const conn = mysql.createConnection({
 })
 
 conn.query(
-  `SELECT * from students`,
+  `SELECT * from students WHERE teacherId = ?`,
+  [arg],
   (err, results, fields) => {
     if (err) throw err
 
