@@ -1,0 +1,14 @@
+{
+  "name": "mysqlnodejs",
+  "version": "1.0.0",
+  "description": "## 1. Install Mysql Community Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mysql2": "^1.5.3"
+  }
+}
