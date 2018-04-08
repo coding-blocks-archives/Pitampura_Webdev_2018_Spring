@@ -28,7 +28,13 @@ $(function () {
     }
 
   }
+
   getProducts(refreshProducts)
+  $('#product-add-form-container').hide()
+
+  $('#product-edit-toggle').click(function () {
+    $('#product-add-form-container').toggle()
+  })
 
 
   $('#product-submit').click(function (e) {
