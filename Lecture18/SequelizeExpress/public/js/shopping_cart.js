@@ -14,34 +14,31 @@ function postProduct(product, done) {
 }
 
 $(function () {
-  function refreshProducts () {
-    let tableBody = $('#product-table-body')
-    tableBody.empty()
-    for (product of products) {
-      tableBody.append(
-        `<tr>
-          <td>${product.id}</td>
-          <td>${product.name}</td>
-          <td>${product.price}</td>
-        </tr>`
-      )
-    }
+  $('body').prepend(
+    `
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        Shopping Cart
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">
+                    Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/admin">
+                    Admin
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
-  }
-
-  getProducts(refreshProducts)
-  $('#product-add-form-container').hide()
-
-  $('#product-edit-toggle').click(function () {
-    $('#product-add-form-container').toggle()
-  })
-
-
-  $('#product-submit').click(function (e) {
-    e.preventDefault()
-    postProduct({
-      name: $('#product-name').val(),
-      price: $('#product-price').val()
-    }, refreshProducts)
-  })
+    `
+  )
 })
