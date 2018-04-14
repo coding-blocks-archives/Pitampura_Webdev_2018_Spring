@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Scripts -->
+    <script src="/js/jquery-3.2.1.js"></script>
+    <script src="/js/popper.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/fontawesome-all.js"></script>
+    <script src="/js/shopping_cart.js"></script>
+    <script src="/js/admin.js"></script>
+
+
+    <!-- Stylesheets -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/shoppingcart.css" rel="stylesheet">
+</head>
+<body>
+<div class="container p-2">
+    <!-- Title -->
+    <div class="row">
+        <div class="col text-center">
+            <h1>
+                Shopping Cart
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center">
+            <h2>
+                Products
+                <span id="product-edit-toggle">
+                    <i class="far fa-edit" ></i>
+                </span>
+
+            </h2>
+        </div>
+    </div>
+
+    <!-- Product Add Form-->
+    <div id="product-add-form-container" class="row">
+        <div class="col"></div>
+        <div class="col-8">
+            <form>
+                <div class="form-group">
+                    <label for="product-name">Product Name</label>
+                    <input placeholder="Sample Product" class="form-control" type="text" name="name" id="product-name">
+                    <label for="product-price">Product Name</label>
+                    <input placeholder="1000" class="form-control" type="number" name="price" id="product-price">
+                    <div class="row p-2">
+                        <div class="col p-2">
+                            <input id="product-submit" class="btn btn-success col" type="submit" value="Submit">
+                        </div>
+                        <div class="col p-2">
+                            <input class="btn btn-danger col" type="reset" value="Reset">
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+
+    <!-- Product Table -->
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-10 p-4">
+
+            <table id="product-table" class="table">
+                <thead>
+                <tr>
+                    <th>S.No.</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+                </thead>
+                <tbody id="product-table-body">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col"></div>
+    </div>
+
+</div>
+</body>
+</html>
