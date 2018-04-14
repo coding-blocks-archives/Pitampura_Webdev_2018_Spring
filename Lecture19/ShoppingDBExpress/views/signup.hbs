@@ -15,6 +15,46 @@
 </head>
 <body>
 
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-8 p-3">
+            <h2 class="h2 text-center">Sign Up</h2>
+
+            <div id="user-form-signup" class="row">
+                <div class="col"></div>
+                <div class="col-8">
+                    <form action="/signup" method="post">
+                        <div class="form-group">
+                            <label for="user-username">Username</label>
+                            <input placeholder="username"
+                                   class="form-control" type="text"
+                                   name="username" id="user-username">
+                            <label for="user-password">Password</label>
+                            <input placeholder="password"
+                                   class="form-control" type="password"
+                                   name="password" id="user-password">
+                            <div class="row p-2">
+                                <div class="col p-2">
+                                    <input id="user-signup-submit"
+                                           class="btn btn-success col"
+                                           type="submit" value="Submit">
+                                </div>
+                                <div class="col p-2">
+                                    <input class="btn btn-danger col" type="reset" value="Reset">
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
 
 </body>
 </html>
