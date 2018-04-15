@@ -19,6 +19,16 @@ function checkLoginStatus(done) {
   })
 }
 
+function getCart (done) {
+  $.get('/cart', (data) => {
+    let savedcart = {}
+    for (item of data) {
+      savedcart[''+item.productId] = item.qty
+    }
+    done(savedcart)
+  })
+}
+
 function addNavBar (login) {
   let navBarButtons
   if (!login) {

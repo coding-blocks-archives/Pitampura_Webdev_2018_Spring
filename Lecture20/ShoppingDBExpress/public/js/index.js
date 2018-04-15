@@ -9,6 +9,8 @@ $(function () {
     tableBody.empty()
     let cartTotal = 0
     for (product of products) {
+      console.log(cart)
+      console.log(`product = ${product.id} qty = ${cart[product.id]}` )
       cartTotal += product.price * (cart[product.id] || 0)
       tableBody.append(
         `<tr>
@@ -84,6 +86,13 @@ $(function () {
       $('#btn-save').hide()
     }
   })
-  getProducts(refreshProducts)
+
+  getProducts((products) => {
+    getCart((savedcart) => {
+      cart = Object.assign(savedcart, cart)
+      console.log(cart)
+      refreshProducts()
+    })
+  })
 
 })

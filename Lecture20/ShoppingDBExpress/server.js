@@ -27,6 +27,11 @@ app.use('/signup', require('./routes/signup'))
 app.use('/myaccount', require('./routes/myaccount'))
 app.use('/cart', require('./routes/cart'))
 
+app.get('/logout', (req, res) => {
+  req.logout()
+  res.redirect('/')
+})
+
 app.listen(9898, function () {
     console.log("Server started on http://localhost:9898");
 });
