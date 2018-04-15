@@ -60,6 +60,7 @@ $(function () {
   }
 
   window.saveToServer = function () {
+    $('#btn-save').text('Saving...').prop('disabled', true)
     let body = {usercart: []}
 
     for (productId in cart) {
@@ -71,6 +72,10 @@ $(function () {
 
     $.post('/cart', body, (data) => {
       console.log(data)
+      $('#btn-save').text('Saved!').prop('disabled', true)
+      setTimeout(() => {
+        $('#btn-save').text('Save').prop('disabled', false)
+      }, 1000)
     })
   }
 
