@@ -59,6 +59,11 @@ $(function () {
     refreshProducts()
   }
 
+  checkLoginStatus((loggedIn) => {
+    if (!loggedIn) {
+      $('#btn-save').hide()
+    }
+  })
   getProducts(refreshProducts)
 
 })
