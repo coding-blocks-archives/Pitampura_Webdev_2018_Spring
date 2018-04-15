@@ -25,6 +25,7 @@ app.use('/products', require('./routes/products'))
 app.use('/signin', require('./routes/signin'))
 app.use('/signup', require('./routes/signup'))
 app.use('/myaccount', require('./routes/myaccount'))
+app.use('/cart', require('./routes/cart'))
 
 app.listen(9898, function () {
     console.log("Server started on http://localhost:9898");

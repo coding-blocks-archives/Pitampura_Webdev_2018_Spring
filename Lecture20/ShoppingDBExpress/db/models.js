@@ -32,10 +32,34 @@ const User = db.define('user', {
   }
 })
 
+const Cart = db.define('cart', {
+  qty: {
+    type: Sequelize.DataTypes.INTEGER,
+    defaultValue: 0
+  },
+  userId: {
+    type: Sequelize.DataTypes.INTEGER,
+    references: {
+      model: User,
+      key: 'id'
+    },
+    unique: 'user_product'
+  },
+  productId: {
+    type: Sequelize.DataTypes.INTEGER,
+    references: {
+      model: Product,
+      key: 'id'
+    },
+    unique: 'user_product'
+
+  }
+})
+
 db.sync().then(() => console.log("Database Ready"))
 
 
 
 module.exports = {
-  Product, User
+  Product, User, Cart
 }

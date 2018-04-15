@@ -59,6 +59,21 @@ $(function () {
     refreshProducts()
   }
 
+  window.saveToServer = function () {
+    let body = {usercart: []}
+
+    for (productId in cart) {
+      body.usercart.push({
+        productId,
+        qty: cart[productId]
+      })
+    }
+
+    $.post('/cart', body, (data) => {
+      console.log(data)
+    })
+  }
+
   checkLoginStatus((loggedIn) => {
     if (!loggedIn) {
       $('#btn-save').hide()
