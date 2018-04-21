@@ -14,7 +14,9 @@ async function getTodoCollection () {
 async function insertTodo () {
   try {
     const todos = await getTodoCollection()
-    const result = await todos.insertOne({task: 'something', done: true})
+    const result = await todos.insertOne(
+      {task: 'more tasks', done: true, priority: 3}
+      )
     console.log(result)
   } catch (err) {
     console.error(err)
@@ -24,15 +26,22 @@ async function insertTodo () {
 async function showTodos() {
   try {
     const todos = await getTodoCollection()
-    const docs = await todos.find({done: false}).toArray()
-    console.log(docs)
+    const docs = await todos.find({
+      $and: [
+        {priority:{$in: [1,3]}},
+        {priority: {$exists: true}}
+      ]
+    }).sort({priority: -1}).toArray()
+    for (todo of docs) {
+      console.log(`task: ${todo.task}, done: ${todo.done}, priority: ${todo.priority}`)
+    }
   } catch (err) {
     console.log(err)
   }
 }
 
-// insertTodo()
-showTodos()
+insertTodo()
+// showTodos()
 
 
 //
